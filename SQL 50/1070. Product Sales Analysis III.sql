@@ -23,3 +23,14 @@ FROM (
     FROM sales
 ) ranked_sales
 WHERE r = 1;
+
+
+
+/* ATTEMPT 4: ACCEPTED */
+SELECT product_id, year as first_year, quantity, price
+FROM sales
+WHERE (product_id, year) IN (
+    SELECT product_id, min(year)
+    FROM sales
+    GROUP BY product_id
+);
