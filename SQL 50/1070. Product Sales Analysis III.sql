@@ -25,7 +25,6 @@ FROM (
 WHERE r = 1;
 
 
-
 /* ATTEMPT 4: ACCEPTED */
 SELECT product_id, year as first_year, quantity, price
 FROM sales
