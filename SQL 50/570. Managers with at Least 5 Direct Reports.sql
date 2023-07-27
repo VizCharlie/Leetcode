@@ -1,4 +1,4 @@
-/* ATTEMPT 1: ACCEPTED */
+/* SOLUTION 1 */
 SELECT name 
 FROM Employee 
 WHERE id IN (
@@ -9,7 +9,7 @@ WHERE id IN (
   );
 
 
-/* ATTEMPT 2: ACCEPTED */
+/* SOLUTION 2 */
 WITH emp as (
   SELECT managerid, COUNT(managerid) as mid_count 
   FROM employee
@@ -20,7 +20,7 @@ FROM employee e, emp
 WHERE e.id = emp.managerid
 
 
-/* ATTEMPT 3: ACCEPTED */
+/* SOLUTION 3 */
 WITH emp as (
   SELECT managerid, COUNT(managerid) as mid_count 
   FROM employee
