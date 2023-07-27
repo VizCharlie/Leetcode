@@ -1,4 +1,4 @@
-/* ATTEMPT 1: ACCEPTED */
+/* SOLUTION 1*/
 SELECT 
     DATE_FORMAT(trans_date, '%Y-%m') as month, 
     country, 
