@@ -1,4 +1,4 @@
-/* SOLUTION 1*/
+/* SOLUTION 1 */
 WITH MinYears AS (
     SELECT product_id, MIN(year) AS min_year
     FROM sales
@@ -9,7 +9,7 @@ FROM sales s
 INNER JOIN MinYears m ON s.product_id = m.product_id AND s.year = m.min_year;
 
 
-/* SOLUTION 2*/
+/* SOLUTION 2 */
 SELECT product_id, year as first_year, quantity, price
 FROM (
     SELECT product_id, year, quantity, price,
@@ -19,7 +19,7 @@ FROM (
 WHERE r = 1;
 
 
-/* SOLUTION 3*/
+/* SOLUTION 3 */
 SELECT product_id, year as first_year, quantity, price
 FROM sales
 WHERE (product_id, year) IN (
